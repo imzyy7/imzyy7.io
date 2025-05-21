@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome to My Website</title>
+    <style>
+        body {
+            font-family: Montserrat;
+            background-image: url("p3.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            margin: 0;
+        }
+
+        header {
+            color: black;
+            padding: 20px;
+            text-align: center;
+            background-image: url("img/ghibli1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            flex-wrap: wrap;
+        }
+
+        .navbar a {
+            color: black;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            background-color: #7393B3;
+            color: black;
+        }
+
+        section {
+            padding: 20px;
+            margin: 50px;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: small;
+            padding: 10px;
+            color: #555;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 2px solid black;
+            padding: 8px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .image-row {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            gap: 20px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        .image-row img {
+            width: 250px;
+            height: 180px;
+            object-fit: cover;
+            border: 3px solid #ddd;
+            border-radius: 8px;
+            padding: 5px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .image-row img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0, 140, 186, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to My Personal Website</h1>
+        <p style="color:black">IMAN_KCDIM144 4B</p>
+    </header>
+
+    <div class="navbar"><center>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="inspiration.html">Inspiration</a>
+        <a href="education.html">Education</a>
+        <a href="hobby.html">Hobby</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </div></center>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p style="text-align:justify;">I am a <i>student of UiTM Kedah</i>, pursuing a diploma in <u>Library Informatics</u>. I am passionate about <span style="color:SlateBlue">sonder</span>. My motivational quote from Marilyn Monroe is <i>"Sometimes things fall apart so that better things can fall together"</i>. This quote has really taught me to embrace and be brave about things in life to overcome adulthood. And one thing about me is, I’m someone who often finds myself reflecting on life and the people around me. A big part of that is my love for the idea of <span style="color:SlateBlue">sonder</span>, the realization that everyone has their own complex lives, full of their own dreams, struggles, and moments that we might never fully understand. It’s a thought that keeps me grounded and helps me connect more deeply with others.</p>
+
+        <p style="text-align:justify;">Life can be tough, and adulthood can sometimes feel overwhelming. But instead of fearing change or failure, I’ve learned to embrace it. Every challenge, every moment of uncertainty, is an opportunity to grow, adapt, and eventually find something better. This mindset has shaped not only how I approach life but also how I approach my studies.</p>
+
+        <p style="text-align:justify;">In my studies, I’m not just learning about cataloging or archiving; I’m learning how to make information easier to find, more accessible, and more meaningful. The idea of preserving knowledge, of helping people connect with resources that can change their lives, drives me. But beyond the technical side of things, I’m constantly striving to be better than I was yesterday. After all, life isn’t just about where you end up; it’s about the person you become along the way.</p>
+
+        <div class="image-row">
+	    <img src="img/imzyy.jpg" alt="Imzyy">
+	    <img src="img/uitm.jpeg" alt="UiTM">
+            <img src="img/sonder.jpg" alt="Sonder">
+            <img src="img/marilyn.jpg" alt="Marilyn">
+            <img src="img/l2.jpg" alt="Library">
+        </div>
+    </section>
+
+</body>
+</html>

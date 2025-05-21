@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome to My Website</title>
+    <style>
+        body {
+            font-family: Montserrat;
+            background-image: url("p3.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            margin: 0;
+        }
+
+        header {
+            color: black;
+            padding: 20px;
+            text-align: center;
+            background-image: url("img/ghibli1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            flex-wrap: wrap; 
+        }
+
+        .navbar a {
+            color: black;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            background-color: #7393B3;
+            color: black;
+        }
+
+        section {
+            padding: 20px;
+            margin: 50px;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: small;
+            padding: 10px;
+            color: #555;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 2px solid black;
+            padding: 8px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        img {
+            border: 3px solid #ddd;
+            border-radius: 8px;
+            padding: 5px;
+            width: 75%;
+            height: 300px; 
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0, 140, 186, 0.5);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 10px 0;
+        }
+
+        .column {
+            flex: 1;
+            padding: 5px;
+            box-sizing: border-box;
+            max-width: 32%;
+        }
+
+        .meme-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        #memePic {
+            max-width: 300px;
+            height: auto;
+            cursor: pointer;
+            border: none;
+            padding: 0;
+            border-radius: 0;
+            box-shadow: none;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #memePic:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes flipSideways {
+            0% { transform: rotateY(0deg); }
+            50% { transform: rotateY(180deg); }
+            100% { transform: rotateY(0deg); }
+        }
+
+        .flip-sideways {
+            animation: flipSideways 0.6s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to My Personal Website</h1>
+        <p style="color:black">IMAN_KCDIM144 4B</p>
+    </header>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="inspiration.html">Inspiration</a>
+        <a href="education.html">Education</a>
+        <a href="hobby.html">Hobby</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <p style="text-align:justify;">Meet my cats! First up is Muhammad Diamond. Though we all call him Mondie. He's a clingy little guy who always wants to be close, but somehow manages to act like he doesn't care (classic cat behavior). Then there's Sodiq, our shy and gentle girl with a permanent grumpy face—she's quiet, sweet, and loves hiding in cozy spots. Last but not least is Sofia, the elegant queen of the house. She's calm, independent, and always looks like she's posing for a magazine. Each one has their own quirky charm, and life wouldn't be the same without them!</p>
+
+        <div class="row">
+            <div class="column">
+                <a target="_blank" href="img/c1.jpg"><img src="img/c1.jpg" alt="Mondie"></a>
+            </div>
+            <div class="column">
+                <a target="_blank" href="img/c2.jpg"><img src="img/c2.jpg" alt="Sodiq"></a>
+            </div>
+            <div class="column">
+                <a target="_blank" href="img/c3.jpg"><img src="img/c3.jpg" alt="Sofia"></a>
+            </div>
+        </div>
+
+        <br><br>
+        <p style="text-align:justify;">Last, but not least, attached here gatos for you. Try and click it!</p>
+
+        <!-- Meme Section -->
+        <div class="meme-container">
+            <img src="meme/gatos.jpg" id="memePic" alt="Gatos">
+            <audio id="memeSound" src="meme/pipipi.mp3"></audio>
+        </div>
+    </section>
+
+    <script>
+        const memePic = document.getElementById('memePic');
+        const memeSound = document.getElementById('memeSound');
+        let hasPlayed = false;
+
+        memePic.addEventListener('click', () => {
+            if (!hasPlayed) {
+                memeSound.play();
+                hasPlayed = true;
+            }
+
+            memePic.classList.add('flip-sideways');
+            memePic.addEventListener('animationend', () => {
+                memePic.classList.remove('flip-sideways');
+            }, { once: true });
+        });
+    </script>
+
+    <br><br>
+    <marquee><b><i>THAT'S ALL, BYE! 😁💗</i></b></marquee>
+</body>
+</html>
+
